@@ -1,0 +1,92 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MultiCopy
+</name>
+</assembly>
+<members>
+<member name="T:MultiCopy_Solution.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:MultiCopy_Solution.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:MultiCopy_Solution.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:MultiCopy_Solution.AddSource.GetFolder(System.String)">
+ <summary>
+ Presents the 'Browse for Folder' dialog box to t he user and saves the result, if
+ any, to our "starting directory" textbox.
+ </summary>
+</member>
+<member name="M:MultiCopy_Solution.AddSource.CheckOkButton">
+ <summary>
+ Enables or disables the OK button depending on the values in the form.
+ </summary>
+</member>
+<member name="M:MultiCopy_Solution.AddSource.DirIsReadable(System.String)">
+ <summary>
+ Determines if the directory specified is reachable. If it is a valid directory
+ but we do not have permission, then we trap a "permission denied" exception. If
+ the directory format is invalid (e.g., C:\MYDIR\D:) then that is trapped also.
+ </summary>
+ <param name="sDir">The directory (folder) to check for validity.</param>
+ <returns>True if the directory is readable, otherwise False.</returns>
+</member>
+<member name="M:MultiCopy_Solution.AddTarget.GetFolder(System.String)">
+ <summary>
+ Presents the 'Browse for Folder' dialog box to t he user and saves the result, if
+ any, to our "starting directory" textbox.
+ </summary>
+</member>
+<member name="M:MultiCopy_Solution.AddTarget.CheckOkButton">
+ <summary>
+ Enables or disables the OK button depending on the values in the form.
+ </summary>
+</member>
+<member name="M:MultiCopy_Solution.AddTarget.DirIsReadable(System.String)">
+ <summary>
+ Determines if the directory specified is reachable. If it is a valid directory
+ but we do not have permission, then we trap a "permission denied" exception. If
+ the directory format is invalid (e.g., C:\MYDIR\D:) then that is trapped also.
+ </summary>
+ <param name="sDir">The directory (folder) to check for validity.</param>
+ <returns>True if the directory is readable, otherwise False.</returns>
+</member>
+<member name="M:MultiCopy_Solution.CopyItems.Analyze(System.Windows.Forms.ListView@,System.Windows.Forms.ListView@)">
+ <summary>
+ Perform analysis to determine actions that will occur.
+ </summary>
+ <param name="lvSrc">A ListView containing all the source elements.</param>
+ <param name="lvTgt">A ListView containing all the target elements.</param>
+</member>
+<member name="M:MultiCopy_Solution.CopyItems.GetLastDirName(System.String)">
+ <summary>
+ Parses a path name to determine the last directory name in the path as well as the file
+ name. Example: 
+ </summary>
+ <param name="srcPath">The path name to parse. Example: \\Samson\recording_in_work\movie\Aliens</param>
+ <returns>The last directory name in the path being parsed. Example: Aliens</returns>
+</member>
+<member name="M:MultiCopy_Solution.MainForm.AddNew">
+ <summary>
+ Adds a new source item.
+ </summary>
+</member>
+<member name="M:MultiCopy_Solution.MainForm.EnableControls">
+ <summary>
+ Enable and disable controls on the form dependent on values or contents of
+ other controls.
+ </summary>
+</member>
+</members>
+</doc>

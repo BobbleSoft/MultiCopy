@@ -3,18 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MultiCopy_Solution", "MultiCopy_Solution\MultiCopy_Solution.vbproj", "{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MultiCopy", "MultiCopy_Solution\MultiCopy.vbproj", "{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "MySetup", "MySetup\MySetup.wixproj", "{1912AC8A-D179-4D52-B7DC-C560ABAEC4F9}"
 EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Debug|x86.Build.0 = Debug|Any CPU
 		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Release|x86.ActiveCfg = Release|Any CPU
+		{ACB3E9FB-79F3-4B51-87BD-AFC58D25CF89}.Release|x86.Build.0 = Release|Any CPU
+		{1912AC8A-D179-4D52-B7DC-C560ABAEC4F9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1912AC8A-D179-4D52-B7DC-C560ABAEC4F9}.Debug|x86.ActiveCfg = Debug|x86
+		{1912AC8A-D179-4D52-B7DC-C560ABAEC4F9}.Debug|x86.Build.0 = Debug|x86
+		{1912AC8A-D179-4D52-B7DC-C560ABAEC4F9}.Release|Any CPU.ActiveCfg = Release|x86
+		{1912AC8A-D179-4D52-B7DC-C560ABAEC4F9}.Release|x86.ActiveCfg = Release|x86
+		{1912AC8A-D179-4D52-B7DC-C560ABAEC4F9}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

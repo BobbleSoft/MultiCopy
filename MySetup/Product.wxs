@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include $(sys.CURRENTDIR)\Include.wxi?>
+  
+	<Product Id="*" 
+           Name="MultiCopy" 
+           Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="BobbleSoft" 
+           UpgradeCode="2ce08f82-6b29-4dba-a174-1fc2ad546f14">
+    
+		<Package InstallerVersion="300"
+             Compressed="yes"
+             InstallScope="perMachine"
+             Manufacturer="BobbleSoft"
+             Description="Installs the [ProductName] application."
+             Comments="This was built by Kevin D. Sandal" />
+
+		<MajorUpgrade AllowDowngrades="no"
+                  AllowSameVersionUpgrades="no"
+                  DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+    <!-- Push all the files into a single .MSI -->
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Set the license text to be displayed before installation -->
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.FilesPath)\..\..\EULA.rtf" />
+
+    <!-- Set the icon to be used in "Programs and Features" (aka "Add/Remove Programs") -->
+    <Icon Id="AppIcon" SourceFile="$(var.FilesPath)\..\..\MultiCopy.ico" />
+    <Property Id="ARPPRODUCTICON"   Value="AppIcon" />
+    <Property Id="ARPHELPLINK"      Value="https://github.com/BobbleSoft/MultiCopy/issues" />
+    <Property Id="ARPURLINFOABOUT"  Value="https://github.com/BobbleSoft/MultiCopy/wiki" />
+    <Property Id="ARPURLUPDATEINFO" Value="https://github.com/BobbleSoft/MultiCopy/releases/latest" />
+
+    <!-- Check the .NET Framework is installed -->
+    <Condition Message='.NET Framework 4.7.1, or later, must be installed prior to installation of this product.'>
+      MsiNetAssemblySupport >= "4.7.1"
+    </Condition>
+
+    <Condition Message="You need to be an administrator to install [ProductName].">
+      Privileged
+    </Condition>
+
+    <Condition Message='Windows 7 or later is required for [ProductName].'>
+      VersionNT >= 601
+    </Condition>
+
+    <Feature Id="ProductFeature" Title="MultiCopy" Level="1">
+      <ComponentRef Id="ApplicationShortcuts" />
+      <ComponentRef Id="ApplicaitonShortcutDesktop" />
+      <ComponentGroupRef Id="MyProductComponents" />
+    </Feature>
+
+    <!--
+    WixUI_Minimal
+    WixUI_Advanced
+    WixUI_FeatureTree
+    WixUI_InstallDir
+    WixUI_Mondo
+    -->
+    <UIRef Id="WixUI_Minimal"/>
+	</Product>
+
+  <Fragment>
+    <!-- Where to put the files -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="ManufacturerFolder" Name="!(bind.property.Manufacturer)" >
+          <Directory Id="INSTALLFOLDER" Name="!(bind.property.ProductName)" />
+        </Directory>
+      </Directory>
+      
+      <!-- Start Menu Folder -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuVendorFolder" Name="!(bind.property.Manufacturer)">
+          <Directory Id="ProgramMenuProductFolder" Name="!(bind.property.ProductName)">
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <!-- Add this folder to define the Desktop folder. -->
+      <!-- This will be used to define the Desktop shortcut. -->
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="MyProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="cmp_EULA.rtf" Guid="46873d4d-97f4-4425-8944-1f0b32989667">
+        <File Id="file_EULA.rtf"
+              Name="EULA.rtf"
+              Source="$(var.FilesPath)\..\..\EULA.rtf"
+              KeyPath="no" />
+      </Component>
+
+      <Component Id="cmp_MyIcon" Guid="48f0e925-ed0e-417a-843d-62e0d664d6f4">
+        <File Id="file_MultiCopy.ico"
+              Name="MultiCopy.ico"
+              Source="$(var.FilesPath)\..\..\MultiCopy.ico"
+              KeyPath="no" />
+      </Component>
+
+      <Component Id="cmp_MyExecutable" Guid="9b27f31f-d0b5-4c8b-acaf-056da307a030">
+        <File Id="file_MyExecutable"
+              Name="MultiCopy.exe"
+              Source="$(var.FilesPath)\MultiCopy.exe"
+              Checksum="yes"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Id="cmp_MyConfig" Guid="0634f30f-7b0b-4d37-be93-c5ab2f2949f3">
+        <File Id="file_MyCconfig"
+              Name="MultiCopy.exe.config"
+              Source="$(var.FilesPath)\MultiCopy.exe.config"
+              KeyPath="no" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <!-- Define Start Menu folder objects. -->
+  <Fragment>
+    <Component Id="ApplicationShortcuts" Directory="ProgramMenuProductFolder" Guid="e7534a3f-fe1c-4a10-a04c-955a674c8c10" >
+      <CreateFolder Directory="ProgramMenuVendorFolder" />
+      <CreateFolder Directory="ProgramMenuProductFolder" />
+
+      <!-- Remove folder structure. -->
+      <RemoveFolder Id="RemoveProgramMenuVendorFolder"
+                    Directory="ProgramMenuVendorFolder"
+                    On="uninstall" />
+      <RemoveFolder Id="RemoveProgramMenuProductFolder"
+                    Directory="ProgramMenuProductFolder"
+                    On="uninstall" />
+
+      <Shortcut Id="ApplicationShortcut"
+                Name="!(bind.property.ProductName)"
+                Description="Starts !(bind.property.ProductName)"
+                Target="[INSTALLFOLDER]\MultiCopy.exe"
+                WorkingDirectory="INSTALLFOLDER" />
+
+      <RemoveFolder Id="ProgramMenuProductFolder"
+                    On="uninstall" />
+
+      <RegistryValue Root="HKCU"
+                     Key="Software\!(bind.property.Manufacturer)\!(bind.property.ProductName)"
+                     Name="ApplicationShortcutsInstalled"
+                     Type="integer"
+                     Value="1"
+                     KeyPath="yes" />
+
+      <RegistryValue Root="HKCU"
+                     Key="Software\!(bind.property.Manufacturer)\!(bind.property.ProductName)"
+                     Name="Version"
+                     Type="string"
+                     Value="[ProductVersion]"
+                     KeyPath="no" />
+    </Component>
+  </Fragment>
+
+  <!-- Define Desktop shortcut objects. -->
+  <Fragment>
+    <DirectoryRef Id="DesktopFolder" >
+      <Component Id="ApplicaitonShortcutDesktop" Guid="222b94f2-0126-4779-af83-83d36fbaf1a7" >
+        <Shortcut Id="MyDesktopShortcut"
+                      Name="!(bind.property.ProductName)"
+                      Description="Copies multiple files and folders to multiple folders."
+                      Directory="DesktopFolder"
+                      Target="[INSTALLFOLDER]MultiCopy.exe"
+                      WorkingDirectory="INSTALLFOLDER" />
+
+        <RegistryValue Root="HKCU"
+                       Key="Software\!(bind.property.Manufacturer)\!(bind.property.ProductName)"
+                       Name="ApplicationShortcutDesktopInstalled"
+                       Type="integer"
+                       Value="1"
+                       KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+</Wix>

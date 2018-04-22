@@ -1,0 +1,16 @@
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy_Solution.MainForm.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy_Solution.Resources.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy.vbproj.GenerateResource.cache
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy.vbproj.CoreCompileInputs.cache
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy_Solution.AboutBox.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy_Solution.AddSource.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy_Solution.AddTarget.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy_Solution.CopyItems.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Debug\MultiCopy.exe.config
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Debug\MultiCopy.exe
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Debug\MultiCopy.pdb
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Debug\MultiCopy.xml
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy.vbprojResolveAssemblyReference.cache
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy.exe
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy.xml
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Debug\MultiCopy.pdb

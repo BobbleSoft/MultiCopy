@@ -1,0 +1,15 @@
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Release\MultiCopy.exe.config
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Release\MultiCopy.exe
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Release\MultiCopy.pdb
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\bin\Release\MultiCopy.xml
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy_Solution.AboutBox.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy_Solution.AddSource.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy_Solution.AddTarget.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy_Solution.CopyItems.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy_Solution.MainForm.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy_Solution.Resources.resources
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy.vbproj.GenerateResource.cache
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy.vbproj.CoreCompileInputs.cache
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy.exe
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy.xml
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MultiCopy_Solution\obj\Release\MultiCopy.pdb

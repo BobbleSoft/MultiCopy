@@ -1,0 +1,4 @@
+..\MultiCopy_Solution\bin\debug\..\..\EULA.rtf
+..\MultiCopy_Solution\bin\debug\..\..\MultiCopy.ico
+..\MultiCopy_Solution\bin\debug\MultiCopy.exe.config
+..\MultiCopy_Solution\bin\debug\MultiCopy.exe

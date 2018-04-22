@@ -1,0 +1,6 @@
+obj\Debug\Product.wixobj
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MySetup\bin\Debug\MultiCopySetup.msi
+C:\Users\kdsan\source\repos\MultiCopy_Solution\MySetup\bin\Debug\MultiCopySetup.wixpdb
+obj\Debug\MySetup.wixproj.BindContentsFileListnull.txt
+obj\Debug\MySetup.wixproj.BindOutputsFileListnull.txt
+obj\Debug\MySetup.wixproj.BindBuiltOutputsFileListnull.txt
